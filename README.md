@@ -16,6 +16,8 @@ SADD someset value3 value4
 
 You can specify a file to the script as a command-line argument
 
+### Python 2
+
 ```sh
 python redis-mass.py input.txt | redis-cli --pipe
 ```
@@ -24,4 +26,16 @@ or pipe input from stdin
 
 ```sh
 cat input.txt | python redis-mass.py | redis-cli --pipe
+```
+
+### Python 3
+
+```sh
+python redis-mass-p3.py input.txt | redis-cli --pipe
+```
+
+or pipe input from stdin
+
+```sh
+cat input.txt | python redis-mass-p3.py | redis-cli --pipe
 ```
